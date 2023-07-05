@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <script>
+      function validateForm(event) {
+        event.preventDefault(); // Prevents the form from submitting
+    
+        // Get the input value
+        var dateInput = document.getElementById("date").value;
+    
+        // Validate the input
+        if (dateInput === "") {
+          alert("Please select a date.");
+          return;
+        }
+    
+        // Perform further actions or submit the form
+        // ...
+      }
+    </script>
+    <style>
+        .header {
+          height: 106px;
+          background-color: #b7a86c;
+          display: flex;
+        }
+        .logo {
+          flex: 1;
+          align-self: center;
+          max-width: 55%;
+          max-height: 55%;
+          object-fit:contain;
+          object-position: 110px;
+        }
+
+        a{
+    text-decoration: none;}
+        a:link, a:visited{
+            background-color: #b7a86c;
+            color: white;
+            padding: 30px 18px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        a:hover,a:active{
+            background-color: rgba(233, 181, 40, 0.918);
+        }
+        .filters{
+          display: flex;
+  flex-direction:row;
+  align-items: center;
+  gap: 15px; 
+  margin-left:4cm;
+  margin-right: 3cm;
+  margin-top: 1cm;
+}
+        
+        input[type = date], input[type=number]{
+          
+  width: 190px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px ;
+  font-family: Product Sans;
+  font-size: 20px;
+        }
+        .submit-button {
+  align-self: flex-end;
+  width: 270px;
+  line-height: 63px;
+  font-family: Product Sans Light;
+  font-size: 20px;
+  background-color: rgb(0, 120, 150);
+color: white;
+border-radius: 7px;
+}
+button:active{
+  background-color: rgba(0, 47, 68, 0.918);
+}
+.rooms{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  gap: 10px; 
+  margin-left:4cm;
+  margin-right: 3cm;
+  margin-top: 0cm;
+  margin-bottom: 1cm;
+  border: solid;
+  border-radius: 12px;
+  border-color: #b7a86c;
+  background-color: white;
+  
+  
+}
+.roomPic{
+  max-width: 20%;
+  max-height: 20% ;
+}
+.description{
+  width: 6cm;
+  margin-left: 10px;
+}
+.price{
+  width: 1cm;
+  margin-left: 390px;
+  height: 4cm;
+  font-family: Product Sans Light;
+}
+.book-now {
+  align-self: flex-end;
+  width: 120px;
+  line-height: 30px;
+  font-family: Product Sans Light;
+  font-size: 18px;
+  background-color: rgb(0, 120, 150);
+  color: white;
+  border-radius: 7px;
+}
+
+        
+      </style>
+</head>
+<body>
+    <div class = "header">
+        <img src = "Hennan Nameplate.png" alt = "nameplate" class="logo">
+        <h1 style = "font-family: 'Californian FB';font-size: 23px; color: white; text-align: right; margin-right: 60px; margin-top: 1px;"> 
+                <a href = "Room.html" target="_blank" style="margin: 10px; ">ROOMS</a>
+                <a href = "Dining.html" target="_blank"style="margin: 10px;">DINING</a>
+                <a href = "Facilities.html" target="_blank"style="margin: 10px;">FACILITIES</a>
+          <a href = "Account.html" target="_blank" style="margin: 10px;">ACCOUNT</a>
+          <a href = "Book.html" target="_blank" class = "book" style="margin: 10px; background-color: rgb(139, 103, 1); color:aliceblue;">BOOK NOW</a>
+        </h1>
+    </div>
+    <div class = "filters">
+
+      <form onsubmit="validateForm(event)" class = "form">
+        <label for="date" style="font-family: Product Sans; font-size: 20px; color:rgb(0, 96, 121);">Check In</label>
+        <input type="date" id="date" name="date" required>
+      </form>
+
+      <form onsubmit="validateForm(event)" class = "form">
+        <label for="date" style="font-family: Product Sans; font-size: 20px; color:rgb(0, 96, 121);">Check Out</label>
+        <input type="date" id="date" name="date" required> 
+      </form>
+
+      <form onsubmit="validateForm(event)" class = "form">
+        <label for="date" style="font-family: Product Sans; font-size: 20px; color:rgb(0, 96, 121);">No. of Person</label>
+        <input type="number" id="noPerson" name="date" required>
+      </form>
+
+      <form onsubmit="validateForm(event)" class = "form">
+        <label for="number" style="font-family: Product Sans; font-size: 20px; color:rgb(0, 96, 121);"> No. of Rooms</label>
+        <input type="number" id="date" name="date" required>
+      </form>
+
+      <button class="submit-button">Check Availability</button>
+    </div>
+    
+    <h2 style="margin-left: 4.2cm; font-family: Product Sans Thin; color:#b7a86c">Available Rooms</h2>
+    
+    <div class = "rooms" style = "padding: 10px;">
+      <img src = "RoomSample.jpg" class="roomPic" >
+      <div class = "description">
+        <h2 style=" font-family: 'Oxygen';">Super Deluxe Room      </h2>
+        <h4 style="width: 550px; font-family: 'Californian FB';"> An extremely comfortable room that has a view of the peace and the city scape. It has strong WiFi connection and aircon.</h4>
+        <h5 style=" font-family: 'Oxygen';"> 2 Beds Max guests: 4</h5>
+      </div>
+      <div class = "price">
+        <h2 style = "width: 200px">PHP 2000<br> for 3 night</h2>
+        <button class="book-now">Book Now!</button>
+      </div>
+    </div>
+    <div class = "rooms" style = "padding: 10px;">
+      <img src = "RoomSample.jpg" class="roomPic" >
+      <div class = "description">
+        <h2 style=" font-family: 'Oxygen';">Super Deluxe Room      </h2>
+        <h4 style="width: 550px; font-family: 'Californian FB';"> An extremely comfortable room that has a view of the peace and the city scape. It has strong WiFi connection and aircon.</h4>
+        <h5 style=" font-family: 'Oxygen';"> 2 Beds Max guests: 4</h5>
+      </div>
+      <div class = "price">
+        <h2 style = "width: 200px">PHP 2000<br> for 3 night</h2>
+        <button class="book-now">Book Now!</button>
+      </div>
+    </div>
+    <div class = "rooms" style = "padding: 10px;">
+      <img src = "RoomSample.jpg" class="roomPic" >
+      <div class = "description">
+        <h2 style=" font-family: 'Oxygen';">Super Deluxe Room      </h2>
+        <h4 style="width: 550px; font-family: 'Californian FB';"> An extremely comfortable room that has a view of the peace and the city scape. It has strong WiFi connection and aircon.</h4>
+        <h5 style=" font-family: 'Oxygen';"> 2 Beds Max guests: 4</h5>
+      </div>
+      <div class = "price">
+        <h2 style = "width: 200px">PHP 2000<br> for 3 night</h2>
+        <button class="book-now">Book Now!</button>
+      </div>
+    </div>
+    <div class = "rooms" style = "padding: 10px;">
+      <img src = "RoomSample.jpg" class="roomPic" >
+      <div class = "description">
+        <h2 style=" font-family: 'Oxygen';">Super Deluxe Room      </h2>
+        <h4 style="width: 550px; font-family: 'Californian FB';"> An extremely comfortable room that has a view of the peace and the city scape. It has strong WiFi connection and aircon.</h4>
+        <h5 style=" font-family: 'Oxygen';"> 2 Beds Max guests: 4</h5>
+      </div>
+      <div class = "price">
+        <h2 style = "width: 200px">PHP 2000<br> for 3 night</h2>
+        <button class="book-now">Book Now!</button>
+      </div>
+    </div>
+    <div class = "rooms" style = "padding: 10px; display: none;">
+      <img src = "RoomSample.jpg" class="roomPic" >
+      <div class = "description">
+        <h2 style=" font-family: 'Oxygen';">Super Deluxe Room      </h2>
+        <h4 style="width: 550px; font-family: 'Californian FB';"> An extremely comfortable room that has a view of the peace and the city scape. It has strong WiFi connection and aircon.</h4>
+        <h5 style=" font-family: 'Oxygen';"> 2 Beds Max guests: 4</h5>
+      </div>
+      <div class = "price">
+        <h2 style = "width: 200px">PHP 2000<br> for 3 night</h2>
+        <button class="book-now">Book Now!</button>
+      </div>
+    </div>
+    
+</body>
+</html>
